@@ -1,0 +1,441 @@
+/*
+
+Xilinx Vivado v2022.1 (64-bit) [Major: 2022, Minor: 1]
+SW Build: 3526262 on Mon Apr 18 15:48:16 MDT 2022
+IP Build: 3524634 on Mon Apr 18 20:55:01 MDT 2022
+
+Process ID (PID): 15132
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Tue Mar 28 17:23:34 ART 2023
+Time zone: 	Argentina Standard Time (America/Buenos_Aires)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 12
+
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 2
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.11 64-bit
+Java home: 	E:/Vivado/2022.1/tps/win64/jre11.0.11_9
+Java executable: 	E:/Vivado/2022.1/tps/win64/jre11.0.11_9/bin/java.exe
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Dsun.java2d.d3d=false, -Dsun.awt.nopixfmt=true, -Dsun.java2d.dpiaware=true, -Dsun.java2d.uiScale.enabled=false, -Xverify:none, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, --add-opens=java.desktop/com.sun.awt=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, -XX:NewSize=60m, -XX:MaxNewSize=60m, -Xms256m, -Xmx3072m, -Xss5m]
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	matia
+User home directory: C:/Users/matia
+User working directory: C:/Users/matia/Documents/ArquitecturaComputadoras/TP2
+User country: 	AR
+User language: 	es
+User locale: 	es_AR
+
+RDI_BASEROOT: E:/Vivado
+HDI_APPROOT: E:/Vivado/2022.1
+RDI_DATADIR: E:/Vivado/2022.1/data
+RDI_BINDIR: E:/Vivado/2022.1/bin
+
+Vivado preferences file: C:/Users/matia/AppData/Roaming/Xilinx/Vivado/2022.1/vivado.xml
+Vivado preferences directory: C:/Users/matia/AppData/Roaming/Xilinx/Vivado/2022.1/
+Vivado layouts directory: C:/Users/matia/AppData/Roaming/Xilinx/Vivado/2022.1/data/layouts
+PlanAhead jar file: 	E:/Vivado/2022.1/lib/classes/planAhead.jar
+Vivado log file: 	C:/Users/matia/Documents/ArquitecturaComputadoras/TP2/vivado.log
+Vivado journal file: 	C:/Users/matia/Documents/ArquitecturaComputadoras/TP2/vivado.jou
+Engine tmp dir: 	C:/Users/matia/Documents/ArquitecturaComputadoras/TP2/.Xil/Vivado-15132-Matias
+
+Xilinx Environment Variables
+----------------------------
+XILINX: E:/Vivado/2022.1/ids_lite/ISE
+XILINX_DSP: E:/Vivado/2022.1/ids_lite/ISE
+XILINX_HLS: E:/Vitis_HLS/2022.1
+XILINX_PLANAHEAD: E:/Vivado/2022.1
+XILINX_VIVADO: E:/Vivado/2022.1
+XILINX_VIVADO_HLS: E:/Vivado/2022.1
+
+
+GUI allocated memory:	256 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,234 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: C:\Users\matia\Documents\ArquitecturaComputadoras\TP2\TP2.xpr. Version: Vivado v2022.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project C:/Users/matia/Documents/ArquitecturaComputadoras/TP2/TP2.xpr 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 59 MB. Current time: 3/28/23, 5:23:35 PM ART
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/matia/Documents/ArquitecturaComputadoras/TP2/TP2.xpr 
+// Tcl Message: INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/matia/Documents/ArquitecturaComputadoras/TP2/TP2.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 116 MB (+119502kb) [00:00:24]
+// [Engine Memory]: 1,234 MB (+1142659kb) [00:00:24]
+// WARNING: HEventQueue.dispatchEvent() is taking  2195 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Vivado/2022.1/data/ip'. 
+// Project name: TP2; location: C:/Users/matia/Documents/ArquitecturaComputadoras/TP2; part: xc7a35tcpg236-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 1208.980 ; gain = 0.000 
+dismissDialog("Open Project"); // bA
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 124 MB (+1833kb) [00:04:45]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 62 MB. Current time: 3/28/23, 5:53:35 PM ART
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 54 MB. Current time: 3/28/23, 6:23:35 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 54 MB. Current time: 3/28/23, 6:53:36 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 54 MB. Current time: 3/28/23, 7:23:36 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/28/23, 7:53:36 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/28/23, 8:23:36 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/28/23, 8:53:37 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/28/23, 9:23:37 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/28/23, 9:53:37 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/28/23, 10:23:37 PM ART
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 54 MB. Current time: 3/28/23, 10:53:38 PM ART
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/28/23, 11:23:38 PM ART
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/28/23, 11:53:38 PM ART
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 12:23:38 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 12:53:39 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 1:23:39 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 1:53:39 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 2:23:39 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 2:53:40 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 3:23:40 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 3:53:40 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 4:23:40 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 4:53:41 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 5:23:41 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 5:53:41 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 6:23:41 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 6:53:42 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 7:23:42 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 7:53:42 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 8:23:42 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 8:53:43 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 9:23:43 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 9:53:43 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 10:23:43 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 10:53:44 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 11:23:44 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 11:53:44 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 12:23:44 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 12:53:45 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 1:23:45 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 1:53:45 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 2:23:45 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 2:53:46 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 3:23:46 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 3:53:46 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 4:23:46 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 4:53:47 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 5:23:47 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 5:53:47 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 6:23:47 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 6:53:48 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 7:23:48 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 7:53:48 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 8:23:48 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 8:53:49 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 9:23:49 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 9:53:49 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 10:23:49 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 10:53:50 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 11:23:50 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/29/23, 11:53:50 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/30/23, 12:23:50 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/30/23, 12:53:51 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/30/23, 1:23:51 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/30/23, 1:53:51 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/30/23, 2:23:52 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/30/23, 2:53:52 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/30/23, 3:23:52 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/30/23, 3:53:52 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/30/23, 4:23:53 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/30/23, 4:53:53 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/30/23, 5:23:53 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/30/23, 5:53:53 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/30/23, 6:23:54 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/30/23, 6:53:54 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/30/23, 7:23:54 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/30/23, 7:53:55 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/30/23, 8:23:55 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/30/23, 8:53:55 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/30/23, 9:23:55 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/30/23, 9:53:56 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/30/23, 10:23:56 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/30/23, 10:53:56 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/30/23, 11:23:56 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/30/23, 11:53:57 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/30/23, 12:23:57 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/30/23, 12:53:57 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/30/23, 1:23:57 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/30/23, 1:53:58 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/30/23, 2:23:58 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/30/23, 2:53:58 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/30/23, 3:23:58 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 53 MB. Current time: 3/30/23, 3:53:59 PM ART

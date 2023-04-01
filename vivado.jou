@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Tue Mar 28 17:22:48 2023
+# Process ID: 15132
+# Current directory: C:/Users/matia/Documents/ArquitecturaComputadoras/TP2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17636 C:\Users\matia\Documents\ArquitecturaComputadoras\TP2\TP2.xpr
+# Log file: C:/Users/matia/Documents/ArquitecturaComputadoras/TP2/vivado.log
+# Journal file: C:/Users/matia/Documents/ArquitecturaComputadoras/TP2\vivado.jou
+# Running On: Matias, OS: Windows, CPU Frequency: 3693 MHz, CPU Physical cores: 12, Host memory: 17081 MB
+#---------------------------------------------------------stastart_gopeopen_project C:/Users/matia/Documents/ArquitecturaComputadoras/TP2/TP2.xupdupdate_compile_order -fileset sources_1
