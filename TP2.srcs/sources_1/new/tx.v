@@ -3,9 +3,9 @@
 module tx
     #(
         parameter N_BITS = 8,     //cantidad de bits de dato
-        parameter N_TICK = 16 // # ticks para stop bits 
+        parameter N_TICK = 16     // # ticks para stop bits 
     )(
-        input wire clk,
+        input wire clock,
         input wire reset,
         input wire tick,
         input wire parity,
@@ -30,8 +30,8 @@ module tx
     //localparam [2 : 0] STOP_1_5B = 3'b101;
     
     //Transmition params
-    localparam START_b 1'b0;
-    localparam STOP_b  1'b1;
+    localparam START_b = 1'b0;
+    localparam STOP_b  = 1'b1;
 
     //Masks
 
@@ -56,7 +56,7 @@ module tx
     reg [4 : 0] next_tick_counter;
     reg [2 : 0] next_bit_counter;
 
-    always @(posedge clk) //Memory
+    always @(posedge clock) //Memory
     begin
         if(reset) 
         begin
@@ -138,7 +138,7 @@ module tx
                 begin
                     TxRDYn = 1;
                     TxDone = 1;
-                    
+
                     next_thr = 0;
                     next_tsr = 0;
                     next_state = START;
