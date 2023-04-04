@@ -27,7 +27,7 @@ module tb_bd;
     $dumpvars;
     #0
     reset = 1;
-    clock = 0;
+    clock = 1;
     #1
     reset = 0;
     #10000
