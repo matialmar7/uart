@@ -26,8 +26,8 @@ module rx
     localparam [2 : 0] STOP_1B   = 3'b011;
    
     //Transmition params
-    localparam START_b 1'b0;
-    localparam STOP_b  1'b1;
+    localparam START_b = 1'b0;
+    localparam STOP_b  = 1'b1;
 
     //Masks
 

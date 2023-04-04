@@ -16,9 +16,9 @@ module uart
         input wire rx,
         output wire rx_ready,
         output wire rx_done,
-        output wire tx
+        output wire tx,
         output wire tx_done,
-        output wire tx_ready,
+        output wire tx_ready
     );
     
     wire tick;
@@ -41,7 +41,7 @@ module uart
         .tx(tx),
         .TxRDYn(tx_ready),
         .TxDone(tx_done)
-    )
+    );
 
     rx#() instancia_rx
     (
@@ -54,5 +54,5 @@ module uart
         .dout(rx_data),
         .RxRDYn(rx_ready),
         .RxDone(rx_done)
-    )
+    );
 endmodule
