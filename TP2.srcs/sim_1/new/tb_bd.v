@@ -4,7 +4,8 @@ module tb_bd;
     localparam CLK = 50e6;
     localparam BAUD_RATE = 9600;
     //Inputs and outputs declaration
-    reg clock, reset, tick;
+    reg clock, reset;
+    wire tick;
     
     //Instancio Baudrate generator
     baudrategen#(.CLK(CLK), .BAUD_RATE(BAUD_RATE)) instancia_bd
@@ -26,6 +27,7 @@ module tb_bd;
     $dumpvars;
     #0
     reset = 1;
+    clock = 0;
     #1
     reset = 0;
     #10000
