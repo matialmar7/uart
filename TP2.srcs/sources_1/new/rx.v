@@ -5,7 +5,7 @@ module rx
         parameter N_BITS = 8,     //cantidad de bits de dato
         parameter N_TICK = 16 // # ticks para stop bits 
     )(
-        input wire clk,
+        input wire clock,
         input wire reset,
         input wire tick,
         input wire parity,
@@ -53,7 +53,7 @@ module rx
     reg [4 : 0] next_tick_counter;
     reg [2 : 0] next_start_tick_counter;
 
-    always @(posedge clk) //Memory
+    always @(posedge clock) //Memory
     begin
         if(reset) 
         begin
