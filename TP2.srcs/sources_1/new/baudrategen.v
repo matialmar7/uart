@@ -1,14 +1,19 @@
 `timescale 1ns / 1ps
 
+`define N_TICKS 16
+
 module baudrategen 
     #(
-        parameter N_BITS = 8, //Baudclock: Clock divider, so that its frequency is 16 times that of the baudrate (by definition). Each bit takes 16xBCLK
-        parameter N_BCLK_DIV = 163  
+        parameter CLK = 50e6, 
+        parameter BAUD_RATE = 9600
     )(
         input wire clock,
         input wire reset,
         output wire tick
     );
+
+    localparam integer N_BCLK_DIV = (CLK / (BAUD_RATE*`N_TICKS));
+    localparam N_BITS = $clog2 (N_BCLK_DIV);
 
     reg [N_BITS - 1 : 0] count;
     reg reset_counter = (count == N_BCLK_DIV) ? 1'b1 : 1'b0;
