@@ -14,8 +14,7 @@ module tx
         input wire [N_BITS - 1 : 0] din, //Data input
 
         //Receiver interface
-        output reg TxRDYn, //Transmitter ready
-        output reg TxDone, //Transmitter ready
+        output reg TxDone, //Transmitter done
         output wire tx //Transmitter serial output
     );
 
@@ -64,18 +63,19 @@ module tx
         if(reset) 
         begin
             state <= START;
-            next_state <= START;
-            thr <= 0;
-            next_thr <= 0;
-            tsr <= 0;
-            next_tsr <= 0;
             tx_reg <= STOP_b; 
-            next_tx <= STOP_b; 
+            thr <= 0;
+            tsr <= 0;            
             tick_counter <= 0;
-            next_tick_counter <= 0;
             bit_counter <= 0;
+            
+            next_thr <= 0;
+            next_tsr <= 0;
+            next_tx <= STOP_b; 
+            next_state <= START;
+            next_tick_counter <= 0;
             next_bit_counter <= 0;
-            TxRDYn <= 1;
+            
             TxDone <= 1;
         end
         else //Update every variable state

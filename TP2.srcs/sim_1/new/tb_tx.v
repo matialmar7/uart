@@ -43,7 +43,6 @@ module tb_tx;
     reset = 1;
     clock = 1;
     parity = 1;
-
     tx_data = 8'b01010101;
     #1
     reset = 0;

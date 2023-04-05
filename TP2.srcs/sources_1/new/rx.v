@@ -57,13 +57,23 @@ module rx
     begin
         if(reset) 
         begin
-            RxRDYn <= 1;
             RxDone <= 1;
+
             state <= START;
             rx_reg <= STOP_b;   
             bit_counter <= 0;
             tick_counter <= 0;
             start_tick_counter <= 0;
+            rsr <= 0;
+            rbr <= 0;
+            
+            next_rsr <= 0; 
+            next_rbr <= 0; 
+            next_state <= START;
+            next_rx <= STOP_b;   
+            next_bit_counter <= 0;
+            next_tick_counter <= 0;
+            next_start_tick_counter <= 0;
         end
         else //Update every variable state
         begin
