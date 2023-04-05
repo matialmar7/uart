@@ -9,6 +9,7 @@ module tx
         input wire reset,
         input wire tick,
         input wire parity,
+        //input wire tx_start,
 
         input wire [N_BITS - 1 : 0] din, //Data input
 
@@ -56,14 +57,18 @@ module tx
     reg [4 : 0] next_tick_counter;
     reg [2 : 0] next_bit_counter;
 
+
+
     always @(posedge clock) //Memory
     begin
         if(reset) 
         begin
             state <= START;
+            next_state <= START;
             thr <= 0;
             tsr <= 0;
             tx_reg <= STOP_b; 
+            next_tx <= STOP_b; 
             tick_counter <= 0;
             bit_counter <= 0;
             TxRDYn <= 1;

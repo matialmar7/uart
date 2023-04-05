@@ -2,11 +2,11 @@
 
 module tb_tx;
     localparam CLK = 50e6;
-    localparam BAUD_RATE = 9600;
+    localparam BAUD_RATE = 115200;
     localparam N_BITS = 8;
     //Inputs and outputs declaration
     reg clock, reset, parity;
-    reg [N-N_BITS - 1 : 0] tx_data;
+    reg [N_BITS - 1 : 0] tx_data;
     wire tick, tx, tx_ready, tx_done;
     
     //Instancio Baudrate generator
