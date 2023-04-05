@@ -66,11 +66,15 @@ module tx
             state <= START;
             next_state <= START;
             thr <= 0;
+            next_thr <= 0;
             tsr <= 0;
+            next_tsr <= 0;
             tx_reg <= STOP_b; 
             next_tx <= STOP_b; 
             tick_counter <= 0;
+            next_tick_counter <= 0;
             bit_counter <= 0;
+            next_bit_counter <= 0;
             TxRDYn <= 1;
             TxDone <= 1;
         end
