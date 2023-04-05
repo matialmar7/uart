@@ -92,7 +92,6 @@ module tx
 
     always @(posedge tick) //Next state logic
     begin
-        TxDone = 0;
         next_tick_counter = tick_counter + 1;
 
         case(state)
@@ -108,6 +107,7 @@ module tx
                 else
                 begin
                     TxRDYn = 0;
+                    TxDone = 0;
                     next_tx = START_b; 
                     next_state = SHIFT; 
                     next_tick_counter = 0;
