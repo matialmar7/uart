@@ -101,7 +101,7 @@ module tx
                 if(thr == 0)
                 begin
                     next_thr = din;
-                    next_tsr = thr;
+                    next_tsr = din;
                     next_tx = STOP_b;
                     next_state = START; 
                 end
