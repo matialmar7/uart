@@ -7,7 +7,7 @@ module tb_tx;
     //Inputs and outputs declaration
     reg clock, reset, parity;
     reg [N_BITS - 1 : 0] tx_data;
-    wire tick, tx, tx_ready, tx_done;
+    wire tick, tx, tx_done;
     
     //Instancio Baudrate generator
     baudrategen#(.CLK(CLK), .BAUD_RATE(BAUD_RATE)) instancia_bd
@@ -26,7 +26,6 @@ module tb_tx;
 
         .din(tx_data),
         .tx(tx),
-        .TxRDYn(tx_ready),
         .TxDone(tx_done)
     );
     //Create a clock
@@ -36,7 +35,7 @@ module tb_tx;
     initial
     begin
     //For value (wire and reg) change saving 
-    $dumpfile("tb_bd.vcd");
+    $dumpfile("tb_tx.vcd");
     //Specify variables to be dumped, w/o any argument it dumps all variables 
     $dumpvars;
     #0
@@ -46,6 +45,8 @@ module tb_tx;
     tx_data = 8'b01010101;
     #1
     reset = 0;
+    #2
+    rx = 1;
     #10000
     $finish;
     

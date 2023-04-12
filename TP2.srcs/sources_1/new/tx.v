@@ -106,7 +106,6 @@ module tx
                 end
                 else
                 begin
-                    TxRDYn = 0;
                     TxDone = 0;
                     next_tx = START_b; 
                     next_state = SHIFT; 
@@ -145,7 +144,6 @@ module tx
                 next_tx = STOP_b;
                 if(tick_counter == (N_TICK - 1))
                 begin
-                    TxRDYn = 1;
                     TxDone = 1;
 
                     next_thr = 0;
@@ -156,11 +154,10 @@ module tx
             end
             default: //Fault recovery
             begin
-                TxRDYn = 1;
                 TxDone = 1;
                 next_thr = 0;
                 next_tsr = 0;
-                next_state = START_b; 
+                next_state = START; 
                 next_tick_counter = 0;
             end
         endcase

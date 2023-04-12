@@ -12,7 +12,6 @@ module rx
 
         //Receiver interface
         input wire rx,
-        output reg RxRDYn, //Receiver ready
         output reg RxDone, //Receiver done
         output wire [N_BITS - 1:0] dout
     );
@@ -25,16 +24,13 @@ module rx
     localparam [2 : 0] PARITY    = 3'b010;
     localparam [2 : 0] STOP_1B   = 3'b011;
    
-    //Transmition params
-    localparam START_b = 1'b0;
-    localparam STOP_b  = 1'b1;
-
     //Masks
+    localparam START_BIT  = 1;
+    localparam STOP_BIT   = 0;
 
     //Memory
     reg [2 : 0] state;
     reg [2 : 0] next_state;
-    reg rx_reg;
     reg next_rx;
     reg paridad;
     reg done;
@@ -47,9 +43,9 @@ module rx
 
     //Local
     reg [4 : 0] tick_counter;
-    reg [2 : 0] bit_counter;
+    reg [3 : 0] bit_counter;
     reg [2 : 0] start_tick_counter;
-    reg [2 : 0] next_bit_counter;
+    reg [3 : 0] next_bit_counter;
     reg [4 : 0] next_tick_counter;
     reg [2 : 0] next_start_tick_counter;
 
@@ -60,18 +56,19 @@ module rx
             RxDone <= 1;
 
             state <= START;
-            rx_reg <= STOP_b;   
-            bit_counter <= 0;
+            rbr <= 0;   
+            bit_counter <= -1;
             tick_counter <= 0;
             start_tick_counter <= 0;
+            paridad <= 0;
             rsr <= 0;
             rbr <= 0;
             
             next_rsr <= 0; 
             next_rbr <= 0; 
             next_state <= START;
-            next_rx <= STOP_b;   
-            next_bit_counter <= 0;
+            next_rx <= 0;   
+            next_bit_counter <= -1;
             next_tick_counter <= 0;
             next_start_tick_counter <= 0;
         end
@@ -79,7 +76,6 @@ module rx
         begin
             rbr <= next_rbr;
             rsr <= next_rsr;
-            rx_reg <= next_tx;
             state <= next_state;
             bit_counter <= next_bit_counter;
             tick_counter <= next_tick_counter;
@@ -91,31 +87,31 @@ module rx
     always @(posedge tick) //Next state logic
     begin
         next_tick_counter = tick_counter + 1;
-        RxDone = 0;
         case(state)
             START:
             begin
-                if(start_tick_counter == ((N_TICK / 2)-1))
+                if(start_tick_counter == ((N_TICK / 2)-1)) //We need at least 8 ticks to check START
                 begin
-                    RxRDYn = 0;
+                    RxDone = 0;
                     next_state = SHIFT; 
-                    next_tx = START_b; 
+                    next_bit_counter = 0;
+                    next_rbr = 0; 
                     next_tick_counter = 0;
                     next_start_tick_counter = 0;
                 end
                 else 
                 begin
-                    if(rx == 1) 
+                    if(rx == START_BIT) 
                         next_start_tick_counter = start_tick_counter + 1;
                     else
                         next_start_tick_counter = 0;        
                     next_state = START; 
-                    next_tx = STOP_b;
+                    next_bit_counter = -1;
                 end
             end
             SHIFT:
             begin
-                if(tick_counter == (N_TICK - 1))
+                if(tick_counter == (N_TICK - 1)) //Ya queda desfasado por 8
                 begin
                     next_tick_counter = 0;
                     next_bit_counter = bit_counter + 1;
@@ -149,7 +145,6 @@ module rx
             begin
                 if(tick_counter == (N_TICK - 1))
                 begin
-                    RxRDYn = 1;
                     RxDone = 1;
                     next_state = START;
                     next_tick_counter = 0;
@@ -157,13 +152,13 @@ module rx
             end
             default: //Fault recovery
             begin
-                RxRDYn = 1;
                 RxDone = 1;
-                next_state = START_b; 
+                next_state = START; 
                 next_tick_counter = 0;
+                next_bit_counter = -1;
             end
         endcase
     end
 
-    assign dout = rx_reg;
+    assign dout = rbr;
 endmodule
