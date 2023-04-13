@@ -2,4 +2,7 @@
 *user_files
 *.hw
 *.sim
+*.log
+*.str
+*.jou
 TP2.runs
