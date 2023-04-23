@@ -11,16 +11,16 @@ module uart
         input wire reset,
         input wire parity,
         input wire rx,
-        input wire [NB_DATA - 1 : 0] tx_data,
-
-        output wire [NB_DATA - 1 : 0] rx_data,
-        output wire rx_done,
         output wire tx,
-        output wire tx_done
+        output wire rx_done,
+        output wire tx_done,
+
+        input wire [NB_DATA - 1 : 0] tx_data,
+        output wire [NB_DATA - 1 : 0] rx_data
     );
     
     wire tick;
-
+    
     baudrategen#(.CLK(CLK), .BAUD_RATE(BAUD_RATE)) instancia_bd
     (
         .clock(clock),

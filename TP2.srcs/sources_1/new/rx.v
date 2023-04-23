@@ -96,7 +96,7 @@ module rx
                     next_state = SHIFT; 
                     next_bit_counter = 0;
                     next_rbr = 0; 
-                    next_tick_counter = 0;
+                    //next_tick_counter = ((N_TICK / 2)-1);
                     next_start_tick_counter = 0;
                 end
                 else 
