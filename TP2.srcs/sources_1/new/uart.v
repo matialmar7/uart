@@ -10,13 +10,13 @@ module uart
         input wire clock,
         input wire reset,
         input wire parity,
+        input wire tx_start,
         input wire rx,
+        input wire [NB_DATA - 1 : 0] tx_data,
+        output wire [NB_DATA - 1 : 0] rx_data,
         output wire tx,
         output wire rx_done,
-        output wire tx_done,
-
-        input wire [NB_DATA - 1 : 0] tx_data,
-        output wire [NB_DATA - 1 : 0] rx_data
+        output wire tx_done
     );
     
     wire tick;
@@ -34,6 +34,7 @@ module uart
         .reset(reset),
         .tick(tick),
         .parity(parity),
+        .tx_start(tx_start),
 
         .din(tx_data),
         .tx(tx),

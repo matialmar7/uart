@@ -9,7 +9,7 @@ module tx
         input wire reset,
         input wire tick,
         input wire parity,
-        //input wire tx_start,
+        input wire tx_start,
 
         input wire [N_BITS - 1 : 0] din, //Data input
 
@@ -97,7 +97,7 @@ module tx
         case(state)
             START:
             begin
-                if(thr == 0)
+                if(tx_start == 0)
                 begin
                     next_thr = din;
                     next_tsr = din;

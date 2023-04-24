@@ -1,4 +1,5 @@
 `timescale 1ns / 1ps
+`include "parameters.vh"
 
 module ALU
     #( //For Parameters
@@ -10,15 +11,6 @@ module ALU
        input wire[N_BITS - 1 : 0] i_OP,
        output reg[N_BITS - 1 : 0] o_RES
     );
-    //Local parameter definition
-    localparam ADD = 6'b100000;
-    localparam SUB = 6'b100010;
-    localparam AND = 6'b100100;
-    localparam OR  = 6'b100101;
-    localparam XOR = 6'b100110;
-    localparam SRA = 6'b000011;
-    localparam SRL = 6'b000010;
-    localparam NOR = 6'b100111;
     
     always @(*) //Sintetizable secuential loop executed on: "event expresion list" . * means on every event
     begin //c++ scope equivalent.

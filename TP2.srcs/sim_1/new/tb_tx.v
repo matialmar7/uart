@@ -5,7 +5,7 @@ module tb_tx;
     localparam BAUD_RATE = 115200;
     localparam N_BITS = 8;
     //Inputs and outputs declaration
-    reg clock, reset, parity;
+    reg clock, reset, parity,tx_start;
     reg [N_BITS - 1 : 0] tx_data;
     wire tick, tx, tx_done;
     
@@ -23,7 +23,7 @@ module tb_tx;
         .reset(reset),
         .tick(tick),
         .parity(parity),
-
+        .tx_start(tx_start),
         .din(tx_data),
         .tx(tx),
         .TxDone(tx_done)
@@ -45,8 +45,7 @@ module tb_tx;
     tx_data = 8'b01010101;
     #1
     reset = 0;
-    #2
-    rx = 1;
+    tx_start=1;
     #10000
     $finish;
     
