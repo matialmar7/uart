@@ -6,7 +6,8 @@ module tb_uarts;
     localparam N_BITS = 8;
 
     //Inputs and outputs declaration
-    reg  clock, reset, parity, tx_start;
+    reg clock, reset, tx_start;
+    reg parity = 0;
     wire clock_rx, clock_tx, tick_rx, tick_tx,  tx, tx_done, rx_done;
     reg [N_BITS - 1 : 0] tx_data;
     wire [N_BITS - 1 : 0] rx_data;
@@ -65,7 +66,6 @@ module tb_uarts;
     #0
     reset = 1;
     clock = 1;
-    parity = 1;
     tx_data = 8'b00001111;
     tx_start = 0;
     #2
