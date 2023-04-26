@@ -7,7 +7,7 @@ module tb_uarts;
 
     //Inputs and outputs declaration
     reg clock, reset, tx_start;
-    reg parity = 0;
+    reg parity = 1;
     wire clock_rx, clock_tx, tick_rx, tick_tx,  tx, tx_done, rx_done;
     reg [N_BITS - 1 : 0] tx_data;
     wire [N_BITS - 1 : 0] rx_data;
@@ -72,7 +72,29 @@ module tb_uarts;
     reset = 0;
     #100
     tx_start = 1;
-    #10000
+    #100
+    tx_start = 0;
+    
+    while (!tx_done) begin
+        #5; // Wait 5 time units before checking again
+    end   
+    
+    tx_data = 8'b11110000;
+    #100
+    tx_start = 1;
+    #100
+    tx_start = 0;
+    
+        while (!tx_done) begin
+        #5; // Wait 5 time units before checking again
+    end   
+    
+    tx_data = 8'b01010101;
+    #100
+    tx_start = 1;
+    #100
+    tx_start = 0;
+    #10000000
     $finish;
     
     end
